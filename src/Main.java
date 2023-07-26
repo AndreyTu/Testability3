@@ -1,17 +1,20 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CreditPaymentService service = new CreditPaymentService();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println();
+        System.out.println("Сумма: 1000000." + " Cрок кредита: 1 год." + " Процентная ставка 9,99%");
+        System.out.println("Ежемесячный платёж: ");
+        System.out.println(service.calculate(1_000_000, 12));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println();
+        System.out.println("Сумма: 1000000." + " Cрок кредита: 2 года." + " Процентная ставка 9,99%");
+        System.out.println("Ежемесячный платёж: ");
+        System.out.println(service.calculate(1_000_000, 24));
+
+        System.out.println();
+        System.out.println("Сумма: 1000000." + " Cрок кредита: 3 года." + " Процентная ставка 9,99%");
+        System.out.println("Ежемесячный платёж: ");
+        System.out.println(service.calculate(1_000_000, 36));
     }
 }
